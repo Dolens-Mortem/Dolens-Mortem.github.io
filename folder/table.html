@@ -14,13 +14,14 @@
         for (let j = 0; j < 100; j++)
         {
             const cell = document.createElement("td");
-            cell.textContent = `${Math.round(Math.random() * 256)}`;
+            let rand_num = Math.round(Math.random() * 256);
+            cell.textContent = `${rand_num}`;
 
             cell.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
 
             cell.onclick = function()
             {
-                alert(`${i + 1}-${j + 1}`);
+                alert(`${rand_num}`);
             };
 
             row.appendChild(cell);
