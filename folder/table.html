@@ -39,32 +39,12 @@
         }
     }
 
+    const table = document.getElementById("myTable");
     window.onload = function()
     {
         some_function();
     }
 
-    const table = document.getElementById("myTable");
-
-    for (let i = 0; i < 100; i++)
-    {
-        const row = document.createElement("tr");
-        for (let j = 0; j < 100; j++)
-        {
-            const cell = document.createElement("td");
-            cell.textContent = `${i + 1}-${j + 1}`;
-
-            cell.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
-
-            cell.onclick = function()
-            {
-                alert(`Вы кликнули на ячейку: ${i + 1}-${j + 1}`);
-            };
-
-            row.appendChild(cell);
-        }
-        table.appendChild(row);
-    }
     
 </script>
 </body>
