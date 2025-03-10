@@ -2,9 +2,7 @@
 <meta charset="utf8">
 <body>
 
-<button onclick="window.location.reload();"> click me </button>
-
-<h1>Таблица 100x100</h1>
+<button onclick="window.location.reload();"> Обновить цвет </button>
 <table id="myTable"></table>
 
 <script>
@@ -16,13 +14,13 @@
         for (let j = 0; j < 100; j++)
         {
             const cell = document.createElement("td");
-            cell.textContent = `${i + 1}-${j + 1}`;
+            cell.textContent = `${Math.random() * 256}`;
 
             cell.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
 
             cell.onclick = function()
             {
-                alert(`Вы кликнули на ячейку: ${i + 1}-${j + 1}`);
+                alert(`${i + 1}-${j + 1}`);
             };
 
             row.appendChild(cell);
