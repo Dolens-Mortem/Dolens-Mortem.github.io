@@ -16,6 +16,7 @@
             const cell = document.createElement("td");
             let rand_num = Math.round(Math.random() * 256);
             cell.style.backgroundColor = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`;
+            cell.textContent = `${rand_num}`;
 
             cell.onclick = function()
             {
